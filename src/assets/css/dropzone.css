@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.dropzone_title {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #323232;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.dropzone_input_field {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: #323232;
+    /*opacity: 0.5;*/
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+
+.dropdown_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9px;
+}
