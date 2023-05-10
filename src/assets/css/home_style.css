@@ -246,6 +246,7 @@ body {
     font-size: 18px;
     color: #323232;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .constructor_item2_child_box2_radio_inputs_fields_wrapper {
@@ -548,7 +549,7 @@ body {
         margin-right: 25px!important;
     }
 }
-@media  (max-width: 1500px) {
+@media  (min-width: 1379px) and (max-width: 1500px) {
     .constructor_item2_child_box2_radio_inputs_field_label {
         height: 160px!important;
     }
@@ -564,5 +565,43 @@ body {
         margin-right: 25px!important;
     }
 }
+@media (min-width: 1268px) and (max-width: 1379px) {
+    .constructor_item2_child_box2_radio_inputs_field_label {
+        height: 140px!important;
+    }
 
+    .constructor_item2_child_box3_img {
+        margin-right: 25px!important;
+        margin-left: 25px!important;
+        max-width: 310px!important;
+        height: 625px!important;
+    }
+    .constructor_item1{
+        max-width: 230px!important;
+        margin-right: 25px!important;
+    }
+}
+@media (max-width: 1268px) {
+    .constructor_item2_child_box2_radio_inputs_field_label {
+        height: 120px!important;
+    }
+
+    .constructor_item2_child_box3_img {
+        margin-right: 20px!important;
+        margin-left: 20px!important;
+        max-width: 276px!important;
+        height: 560px!important;
+    }
+    .constructor_item1{
+        max-width: 230px!important;
+        margin-right: 25px!important;
+    }
+}
+
+
+@media (max-width: 1267px) {
+    .constructor_item2_child_box2_switch_box_title {
+        font-size: 16px!important;
+    }
+}
 /*media  end*/
