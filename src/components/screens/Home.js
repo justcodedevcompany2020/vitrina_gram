@@ -470,12 +470,20 @@
      //     console.log(selectedDisplayMode, 'hhhhh');
      // };
 
+     const disableBodyScroll = () => {
+         document.body.style.overflow = "hidden";
+     };
+
+     const enableBodyScroll = () => {
+         document.body.style.overflow = "auto";
+     };
+
 
      return (
          <>
 
              <div className='main_wrapper'>
-                 <Header/>
+                 <Header disableBodyScroll={disableBodyScroll} enableBodyScroll={enableBodyScroll}/>
                  <div className='main'>
                      <section className='constructor'>
                          <div className="constructor_wrapper">

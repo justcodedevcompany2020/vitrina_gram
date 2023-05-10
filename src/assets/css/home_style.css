@@ -390,7 +390,10 @@ body {
 }
 
 #constructor_select2 {
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+
 }
 
 #constructor_select2:hover{
@@ -398,6 +401,13 @@ body {
     border-color: unset!important;
 }
 
+ #constructor_select2 .css-3evbh-control {
+    border-radius: 10px;
+}
+
+#constructor_select3 .css-5wh67n-control {
+    border-radius: 10px;
+}
 
 #constructor_select3 .css-1u9des2-indicatorSeparator {
     display: none!important;
@@ -424,7 +434,8 @@ body {
 }
 
 #constructor_select3 {
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
 }
 
 #constructor_select3:hover{
@@ -492,3 +503,66 @@ body {
     outline: none;
     width: 270px;
 }
+.constructor_item2_child_box3_select_wrapper {
+    width: 46%;
+}
+
+/*media start*/
+@media (min-width: 1617px) and (max-width: 1830px) {
+    .constructor_item2_child_box2_radio_inputs_field_label {
+        height: 200px!important;
+    }
+
+    .constructor_item2_child_box3_img {
+        margin-right: 40px!important;
+        margin-left: 40px!important;
+        max-width: 351px!important;
+        height: 735px!important;
+    }
+}
+@media (min-width: 1546px) and (max-width: 1617px) {
+    .constructor_item2_child_box2_radio_inputs_field_label {
+        height: 180px!important;
+    }
+
+    .constructor_item2_child_box3_img {
+        margin-right: 40px!important;
+        margin-left: 40px!important;
+        max-width: 351px!important;
+        height: 735px!important;
+    }
+}
+@media (min-width: 1501px) and (max-width: 1546px) {
+    .constructor_item2_child_box2_radio_inputs_field_label {
+        height: 180px!important;
+    }
+
+    .constructor_item2_child_box3_img {
+        margin-right: 40px!important;
+        margin-left: 40px!important;
+        max-width: 340px!important;
+        height: 700px!important;
+    }
+    .constructor_item1{
+        max-width: 230px!important;
+        margin-right: 25px!important;
+    }
+}
+@media  (max-width: 1500px) {
+    .constructor_item2_child_box2_radio_inputs_field_label {
+        height: 160px!important;
+    }
+
+    .constructor_item2_child_box3_img {
+        margin-right: 30px!important;
+        margin-left: 30px!important;
+        max-width: 340px!important;
+        height: 700px!important;
+    }
+    .constructor_item1{
+        max-width: 230px!important;
+        margin-right: 25px!important;
+    }
+}
+
+/*media  end*/
