@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 *{
     margin: 0;
@@ -483,15 +485,128 @@ body {
     border-radius: 10px!important;
 }
 
-.constructor_item2_child_box3_img {
+.constructor_item2_mobile_design {
     width: 100%;
     max-width: 395px;
     height: 800px;
     margin-left: 60px;
     margin-right: 57px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.constructor_item2_mobile_design_img {
+    width: 100%;
+    max-width: 395px;
+    position: absolute;
+
+}
+.constructor_item2_mobile_design_wrapper_logo {
+    width: 100%;
+    height: 94px;
+    /*margin: 0 auto;*/
+    margin-bottom: 28px;
+    display: flex;
 }
 
+.constructor_item2_mobile_design_wrapper_logo img {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*object-fit: cover;*/
+}
+.constructor_item2_mobile_design_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.constructor_item2_mobile_design_wrapper {
+    background: #19194A;
+    width: calc(100% - 50px);
+    margin: auto auto;
+    height: calc(100% - 41px);
+    border-radius: 45px;
+    padding-top: 80px;
+    overflow: hidden;
+    position: relative;
+    z-index: 9999;
+}
+.constructor_item2_mobile_design_items_wrapper {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /*padding-left: 25px;*/
+    /*padding-right: 25px;*/
+    /*padding-top: 28px;*/
+    overflow: scroll;
+    height: calc(100% - 174px);
+
+    /*flex: 1;*/
+}
+.constructor_item2_mobile_design_item {
+    /*width: 92px;*/
+    width: 33%;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.constructor_item2_mobile_design_item_title_price_info_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.constructor_item2_mobile_design_item_title {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    /*line-height: 15px;*/
+    color: #FFFFFF;
+}
+.constructor_item2_mobile_design_item_add_btn {
+    background: #00C5F2;
+    border-radius: 6px;
+    width: 80px;
+    height: 30px;
+    border: unset;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #232323;
+}
+
+.constructor_item2_mobile_design_item_price_info {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    /*line-height: 15px;*/
+    color: #FFFFFF;
+}
+.constructor_item2_mobile_design_item_img {
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    margin-bottom: 7px;
+}
+.constructor_item2_mobile_design_item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 .constructor_item2_child_box3_img img {
     height: 100%;
     width: 100%;

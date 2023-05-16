@@ -375,6 +375,7 @@
  import DropzoneForBanner from "./includes/DropzoneForBanner";
  import Select from 'react-select'
  import { Switch } from "react-switch-input";
+ // import {Events} from "react-dropzone/typings/tests/events";
 
  let sl_set = {};
 
@@ -403,8 +404,91 @@
      const [value, setValue] = useState(undefined);
      const [headerScroll, setHeaderScroll] = useState(false);
      const [sliding, setSliding] = useState(false);
+     const mobile_items = [
+         {
+             id: 1,
+             img: require('../../assets/img/mobile_screen1.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 2,
+             img: require('../../assets/img/mobile_screen2.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 3,
+             img: require('../../assets/img/mobile_screen3.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 4,
+             img: require('../../assets/img/mobile_screen4.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 5,
+             img: require('../../assets/img/mobile_screen5.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+         {
+             id: 6,
+             img: require('../../assets/img/mobile_screen6.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 7,
+             img: require('../../assets/img/mobile_screen7.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 8,
+             img: require('../../assets/img/mobile_screen8.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 9,
+             img: require('../../assets/img/mobile_screen9.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 10,
+             img: require('../../assets/img/mobile_screen10.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+
+         {
+             id: 11,
+             img: require('../../assets/img/mobile_screen8.png'),
+             title: 'Product',
+             price: '220₽',
+         },
+         {
+             id: 12,
+             img: require('../../assets/img/mobile_screen11.png'),
+             title: 'Product',
+             price: '220₽',
+         },
 
 
+     ]
 
      const handleOptionChange2 = (e) => {
          setSelectedDisplayMode(e.target.value);
@@ -500,8 +584,6 @@
                                      </Link>
                                  </div>
                                  <div className='constructor_item2'>
-
-
                                      <div className='constructor_item2_child1_wrapper'>
                                          <div className='constructor_item2_child_box1'>
                                              <div className='constructor_item2_child_box1_input_wrapper'>
@@ -706,10 +788,55 @@
                                          </div>
                                      </div>
 
+                                     <div className='constructor_item2_mobile_design'>
+                                         <div className='constructor_item2_mobile_design_img'>
+                                             <img src={require('../../assets/img/mobile_border_img.png')}/>
+                                         </div>
+                                         <div className='constructor_item2_mobile_design_wrapper'>
 
-                                     <div className='constructor_item2_child_box3_img'>
-                                         <img src={require('../../assets/img/mobile.png')}/>
+                                                <div
+                                                    className='constructor_item2_mobile_design_wrapper_logo'
+                                                    style={{
+                                                        justifyContent: selectedType == 'type_logo1' ? 'flex-start' : selectedType == 'type_logo2' ? 'center' : selectedType == 'type_logo3' ? 'flex-end' : 'flex-start'
+                                                    }}
+                                                >
+                                                    <img src={require('../../assets/img/main_logo.png')}/>
+                                                </div>
+                                             <div className='constructor_item2_mobile_design_items_wrapper'>
+                                                 {mobile_items.map((item, index) => {
+
+                                                     return (
+
+                                                         <div
+                                                             className='constructor_item2_mobile_design_item'
+                                                             style={{
+                                                                 width: selectedDisplayMode == 'mode1' ? '100%' : selectedDisplayMode == 'mode2' ? '48%' : selectedDisplayMode == 'mode3' ? '33%' : selectedDisplayMode == 'mode4' ? '24%' : '33%'
+                                                             }}
+                                                         >
+                                                             <div className='constructor_item2_mobile_design_item_img'>
+                                                                 <img src={item.img}/>
+                                                             </div>
+                                                             <div className='constructor_item2_mobile_design_item_title_price_info_box'>
+                                                                 <p className='constructor_item2_mobile_design_item_title'>
+                                                                     {item.title} -
+                                                                 </p>
+                                                                 <p className='constructor_item2_mobile_design_item_price_info'>
+                                                                     {item.price}
+                                                                 </p>
+                                                             </div>
+                                                             <button className='constructor_item2_mobile_design_item_add_btn'>
+                                                                 ADD
+                                                             </button>
+                                                         </div>
+
+                                                     );
+                                                 })}
+
+                                             </div>
+                                         </div>
+
                                      </div>
+
                                  </div>
 
                              </div>
