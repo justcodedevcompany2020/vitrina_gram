@@ -389,21 +389,29 @@
      ]);
 
      const [colors, setColors] = useState([
-         {value: 'Жёлтый', label: 'Жёлтый'},
-         {value: 'Оранжевый', label: 'Оранжевый'},
-         {value: 'Фиолетовый', label: 'Фиолетовый'}
+         {label: 'Зеленый', value:'#00C900'},
+         {label: 'Светло-синий', value: '#00C5F2'},
+         {label: 'Темно-синий', value: '#19194A'},
+         {label: 'Красный', value: '#FE3B30'},
+         {label: 'Жёлтый', value: '#FFFF00'},
+
+
      ]);
      const [colors_button, setColorsButton] = useState([
-         {value: 'Жёлтый', label: 'Жёлтый'},
-         {value: 'Оранжевый', label: 'Оранжевый'},
-         {value: 'Фиолетовый', label: 'Фиолетовый'}
+         {label: 'Жёлтый', value: '#FFFF00'},
+         {label: 'Темно-синий', value: '#19194A'},
+         {label: 'Красный', value: '#FE3B30'},
+         {label: 'Зеленый', value:'#00C900'},
+
      ]);
      const [selectedType, setSelectedType] = useState('type_logo1');
      const [selectedDisplayMode, setSelectedDisplayMode] = useState('mode1');
-     const [switchEnabled, setSwitchEnabled] = useState(false);
      const [value, setValue] = useState(undefined);
      const [headerScroll, setHeaderScroll] = useState(false);
      const [sliding, setSliding] = useState(false);
+     const [isChecked, setIsChecked] = useState(false);
+
+
      const mobile_items = [
          {
              id: 1,
@@ -494,9 +502,11 @@
          setSelectedDisplayMode(e.target.value);
      };
 
-     const handleChangeSwitch = (checked) => {
-         setSwitchEnabled(checked);
+
+     const handleChangeLogo = (event) => {
+         setIsChecked(event.target.checked);
      };
+
      useEffect(() => {
          if ('scrollRestoration' in window.history) {
              window.history.scrollRestoration = 'manual';
@@ -561,8 +571,40 @@
      const enableBodyScroll = () => {
          document.body.style.overflow = "auto";
      };
+     const [selectedOption, setSelectedOption] = useState(null);
+     const [selectedColorButtonOption, setSelectedColorButtonOption] = useState(null);
+
+     const handleChange = (selectedOption) => {
+         setSelectedOption(selectedOption);
+     };
+     const handleChange2 = (selectedColorButtonOption) => {
+         setSelectedColorButtonOption(selectedColorButtonOption);
+     };
 
 
+     const customStyles = {
+         control: (provided, state) => ({
+             ...provided,
+             backgroundColor: selectedOption?.value,
+             // Add any other styles you want to customize the control
+         })
+     };
+     const customStyles2 = {
+         control: (provided, state) => ({
+             ...provided,
+             backgroundColor: selectedColorButtonOption?.value,
+             // Add any other styles you want to customize the control
+         })
+     };
+
+
+     const [name_input_value, setNameInputValue] = useState('');
+
+     const setProductName = (event) => {
+         setNameInputValue(event.target.value);
+         console.log(name_input_value)
+
+     };
      return (
          <>
 
@@ -588,7 +630,14 @@
                                          <div className='constructor_item2_child_box1'>
                                              <div className='constructor_item2_child_box1_input_wrapper'>
                                                  <p className='constructor_item2_child_box1_input_title'>Название магазина</p>
-                                                 <input type='text' name='name' className='constructor_item2_child_box1_input_field' placeholder='Ввести название магазина' />
+                                                 <input
+                                                        type='text'
+                                                        name='name'
+                                                        className='constructor_item2_child_box1_input_field'
+                                                        placeholder='Ввести название магазина'
+                                                        value={name_input_value}
+                                                        onChange={setProductName}
+                                                 />
                                              </div>
                                              <div className='constructor_item2_child_box1_select_wrapper'>
                                                  <p className='constructor_item2_child_box1_select_title'>Шрифт текста</p>
@@ -598,7 +647,12 @@
                                          <div className='constructor_item2_child_box2'>
                                              <div className='constructor_item2_child_box2_switch_box'>
                                                  <p className='constructor_item2_child_box2_switch_box_title'>Логотип магазина</p>
-                                                 <Switch id='constructor_item2_child_box2_switch' />
+                                                 <Switch
+                                                     id='constructor_item2_child_box2_switch'
+                                                     checked={isChecked}
+                                                     onChange={handleChangeLogo}
+
+                                                 />
                                              </div>
                                              <div style={{ width: '100%', marginBottom: 20 }}>
                                                  <DropzoneForLogo />
@@ -664,7 +718,6 @@
 
                                              <Switch
                                                  id='constructor_item2_child_box2_switch2'
-                                                 onChange={handleChangeSwitch}
                                              />
                                          </div>
 
@@ -677,29 +730,24 @@
                                              <div className='constructor_item2_child_box3_select_wrapper'>
                                                  <p className='constructor_item2_child_box3_select_title'>Цвет
                                                      фона</p>
-                                                 <Select id='constructor_select2' options={colors}
-                                                         styles={{
-                                                             control: (baseStyles, state) => ({
-                                                                 ...baseStyles,
-                                                                 backgroundColor: state.isFocused ? '#19194A' : '#19194A',
-                                                                 // borderRadius: state.isFocused ? '10' : '10',
-                                                                 borderColor: state.isFocused ? '#BCBCBC' : '#BCBCBC',
-                                                             }),
-                                                         }}/>
+                                                 <Select id='constructor_select2'
+                                                         value={selectedOption}
+                                                         onChange={handleChange}
+                                                         options={colors}
+                                                         styles={customStyles}
+                                                 />
 
                                              </div>
 
                                              <div className='constructor_item2_child_box3_select_wrapper'>
                                                  <p className='constructor_item2_child_box3_select_title'>Цвет
                                                      кнопок</p>
-                                                 <Select id='constructor_select3' options={colors_button}
-                                                         styles={{
-                                                             control: (baseStyles, state) => ({
-                                                                 ...baseStyles,
-                                                                 backgroundColor: state.isFocused ? '#00C5F2' : '#00C5F2',
-                                                                 borderColor: state.isFocused ? '#BCBCBC' : '#BCBCBC',
-                                                             }),
-                                                         }}/>
+                                                 <Select id='constructor_select3'
+                                                         options={colors_button}
+                                                         value={selectedColorButtonOption}
+                                                         onChange={handleChange2}
+                                                         styles={customStyles2}
+                                                 />
 
                                              </div>
                                          </div>
@@ -792,16 +840,24 @@
                                          <div className='constructor_item2_mobile_design_img'>
                                              <img src={require('../../assets/img/mobile_border_img.png')}/>
                                          </div>
-                                         <div className='constructor_item2_mobile_design_wrapper'>
+                                         <div
+                                             className='constructor_item2_mobile_design_wrapper'
+                                             style={{
+                                                 backgroundColor: selectedOption?.value
+                                             }}
+                                         >
 
-                                                <div
-                                                    className='constructor_item2_mobile_design_wrapper_logo'
-                                                    style={{
-                                                        justifyContent: selectedType == 'type_logo1' ? 'flex-start' : selectedType == 'type_logo2' ? 'center' : selectedType == 'type_logo3' ? 'flex-end' : 'flex-start'
-                                                    }}
-                                                >
-                                                    <img src={require('../../assets/img/main_logo.png')}/>
-                                                </div>
+                                             {isChecked &&
+                                                 <div
+                                                     className='constructor_item2_mobile_design_wrapper_logo'
+                                                     style={{
+                                                         justifyContent: selectedType == 'type_logo1' ? 'flex-start' : selectedType == 'type_logo2' ? 'center' : selectedType == 'type_logo3' ? 'flex-end' : 'flex-start'
+                                                     }}
+                                                 >
+                                                     <img src={require('../../assets/img/main_logo.png')}/>
+                                                 </div>
+                                             }
+
                                              <div className='constructor_item2_mobile_design_items_wrapper'>
                                                  {mobile_items.map((item, index) => {
 
@@ -813,18 +869,53 @@
                                                                  width: selectedDisplayMode == 'mode1' ? '100%' : selectedDisplayMode == 'mode2' ? '48%' : selectedDisplayMode == 'mode3' ? '33%' : selectedDisplayMode == 'mode4' ? '24%' : '33%'
                                                              }}
                                                          >
-                                                             <div className='constructor_item2_mobile_design_item_img'>
+                                                             <div
+                                                                 className='constructor_item2_mobile_design_item_img'
+                                                                 style={{
+                                                                     width: selectedDisplayMode == 'mode1' ? 226 : selectedDisplayMode == 'mode2' ? 130 : selectedDisplayMode == 'mode3' ? 70 : selectedDisplayMode == 'mode4' ? 56 : 226,
+                                                                     height: selectedDisplayMode == 'mode1' ? 226 : selectedDisplayMode == 'mode2' ? 130 : selectedDisplayMode == 'mode3' ? 70 : selectedDisplayMode == 'mode4' ? 56 : 226,
+                                                                     paddingTop: selectedDisplayMode == 'mode1' ? 25 : selectedDisplayMode == 'mode2' ? 15 : selectedDisplayMode == 'mode3' ? 10 : selectedDisplayMode == 'mode4' ? 5 : 5,
+                                                                     paddingBottom: selectedDisplayMode == 'mode1' ? 25 : selectedDisplayMode == 'mode2' ? 15 : selectedDisplayMode == 'mode3' ? 10 : selectedDisplayMode == 'mode4' ? 5 : 5,
+
+                                                                 }}
+                                                             >
                                                                  <img src={item.img}/>
                                                              </div>
-                                                             <div className='constructor_item2_mobile_design_item_title_price_info_box'>
-                                                                 <p className='constructor_item2_mobile_design_item_title'>
+                                                             <div
+                                                                 className='constructor_item2_mobile_design_item_title_price_info_box'
+                                                                 style={{
+                                                                     flexDirection: selectedDisplayMode == 'mode4' ? 'column' : 'row',
+
+                                                                 }}
+                                                             >
+                                                                 <p
+                                                                     className='constructor_item2_mobile_design_item_title'
+                                                                     style={{
+                                                                         fontSize: selectedDisplayMode == 'mode1' ? 12 : selectedDisplayMode == 'mode2' ? 12 : selectedDisplayMode == 'mode3' ? 12 : selectedDisplayMode == 'mode4' ? 10 : 12,
+
+                                                                     }}
+                                                                 >
                                                                      {item.title} -
                                                                  </p>
-                                                                 <p className='constructor_item2_mobile_design_item_price_info'>
+                                                                 <p
+                                                                     className='constructor_item2_mobile_design_item_price_info'
+                                                                     style={{
+                                                                         fontSize: selectedDisplayMode == 'mode1' ? 12 : selectedDisplayMode == 'mode2' ? 12 : selectedDisplayMode == 'mode3' ? 12 : selectedDisplayMode == 'mode4' ? 10 : 12,
+
+                                                                     }}
+                                                                 >
                                                                      {item.price}
                                                                  </p>
                                                              </div>
-                                                             <button className='constructor_item2_mobile_design_item_add_btn'>
+                                                             <button
+                                                                 className='constructor_item2_mobile_design_item_add_btn'
+                                                                 style={{
+                                                                     width: selectedDisplayMode == 'mode1' ? 102 : selectedDisplayMode == 'mode2' ? 80: selectedDisplayMode == 'mode3' ? 80 : selectedDisplayMode == 'mode4' ? 64 : 102,
+                                                                     height: selectedDisplayMode == 'mode1' ? 32 : selectedDisplayMode == 'mode2' ? 30 : selectedDisplayMode == 'mode3' ? 30 : selectedDisplayMode == 'mode4' ? 24 : 32,
+                                                                     fontSize: selectedDisplayMode == 'mode1' ? 12 : selectedDisplayMode == 'mode2' ? 12 : selectedDisplayMode == 'mode3' ? 12 : selectedDisplayMode == 'mode4' ? 10 : 12,
+                                                                     backgroundColor: selectedColorButtonOption?.value,
+                                                                 }}
+                                                             >
                                                                  ADD
                                                              </button>
                                                          </div>

@@ -601,6 +601,8 @@ body {
     height: 70px;
     background-color: #ffffff;
     margin-bottom: 7px;
+    border-radius: 16px;
+    overflow: hidden;
 }
 .constructor_item2_mobile_design_item_img img {
     width: 100%;
