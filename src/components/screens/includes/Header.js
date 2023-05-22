@@ -238,7 +238,7 @@ export default function Header(props) {
                             </Link>
                             <Link to={'/new_catalog'} className="headers_navigation_link">
                                 <div className='headers_navigation_link_img'>
-                                    {pathName() == '/new_catalog' ?
+                                    {pathName() == '/new_catalog' || pathName() == '/product_categories' ?
                                         <img src={catalog_active}/>
                                         :
                                         <img src={catalog}/>

@@ -495,6 +495,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../img/mobile_border_img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .constructor_item2_mobile_design_img {
     width: 100%;
@@ -525,7 +528,8 @@ body {
     background: #19194A;
     width: calc(100% - 50px);
     margin: auto auto;
-    height: calc(100% - 41px);
+    /*height: calc(100% - 41px);*/
+    height: 95%;
     border-radius: 45px;
     padding-top: 80px;
     overflow: hidden;
@@ -542,8 +546,9 @@ body {
     /*padding-right: 25px;*/
     /*padding-top: 28px;*/
     overflow: scroll;
-    height: calc(100% - 174px);
-
+    /*height: calc(100% - 174px);*/
+    height: 100%;
+    padding-bottom: 20px;
     /*flex: 1;*/
 }
 .constructor_item2_mobile_design_item {

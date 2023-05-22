@@ -19,6 +19,7 @@ export default function NewCatalog () {
     const [value, setValue] = useState(undefined);
     const [headerScroll, setHeaderScroll] = useState(false);
     const [show_creating_new_feature, setShowCreatingNewFeature] = useState(false);
+    const [show_edit_icon, setShowEditIcon] = useState(false);
     const [new_feature, setNewFeature] = useState('');
 
     const product_detail_items = [
@@ -174,7 +175,10 @@ export default function NewCatalog () {
                                     >
                                         Характеристика товара
                                     </Link>
-                                    <Link className="constructor_item_link">
+                                    <Link
+                                        to={'/product_categories'}
+                                        className="constructor_item_link"
+                                    >
                                         Категории товара
                                     </Link>
                                     <Link className="constructor_item_link">
@@ -184,83 +188,94 @@ export default function NewCatalog () {
                                         Карточка товара
                                     </Link>
                                 </div>
-                                <div className='product_detail_wrapper'>
-                                    <div className='product_detail_title_buttons_wrapper'>
-                                        <p className='product_detail_title'>
-                                            Выберите или добавте характеристику
-                                        </p>
+                                <div className='product_detail_wrapper_main'>
+                                    <div className='product_detail_wrapper'>
+                                        <div className='product_detail_title_buttons_wrapper'>
+                                            <p className='product_detail_title'>
+                                                Выберите или добавте характеристику
+                                            </p>
 
-                                        <div className='product_detail_add_edit_buttons_wrapper'>
-                                            <button
-                                                className='product_detail_add_btn'
-                                                onClick={() => {
-                                                    setShowCreatingNewFeature(true)
-                                                    disableBodyScroll()
+                                            <div className='product_detail_add_edit_buttons_wrapper'>
+                                                <button
+                                                    className='product_detail_add_btn'
+                                                    onClick={() => {
+                                                        setShowCreatingNewFeature(true)
+                                                        disableBodyScroll()
 
-                                                }}
-                                            >
-                                                <span className='product_detail_add_btn_title'>Добавить</span>
-                                                <span className='product_detail_add_btn_icon'>
-                                                    <img src={add_btn_icon}/>
-                                                </span>
-                                            </button>
-                                            <button className='product_detail_edit_btn'>
-                                                Редактировать
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                    <div className='product_detail_items_wrapper'>
-                                        {product_detail_items.map((item, index) => {
-
-                                            return (
-
-                                                <div
-                                                    key={index}
-                                                    className='product_detail_item'
-                                                    style={{
-                                                        backgroundColor: item.active ? '#0165E1' : '#ffffff',
-                                                        border: item.active ? '1px solid #0165E1' : '1px solid #BCBCBC',
-                                                        boxShadow: item.active ? ' 0px 4px 4px rgba(0, 0, 0, 0.25)' : '',
                                                     }}
                                                 >
-                                                    <button
-                                                        className='product_detail_item_delete_btn'
+                                                    <span className='product_detail_add_btn_title'>Добавить</span>
+                                                    <span className='product_detail_add_btn_icon'>
+                                                    <img src={add_btn_icon}/>
+                                                </span>
+                                                </button>
+                                                <button
+                                                    className='product_detail_edit_btn'
+                                                    onClick={() => {
+                                                        setShowEditIcon(!show_edit_icon)
+                                                    }}
+                                                >
+                                                    Редактировать
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                        <div className='product_detail_items_wrapper'>
+                                            {product_detail_items.map((item, index) => {
+
+                                                return (
+
+                                                    <div
+                                                        key={index}
+                                                        className='product_detail_item'
                                                         style={{
-                                                            background: item.active ? '#00C5F295' : '#bcbcbc54',
-                                                            // opacity: 0.32
+                                                            backgroundColor: item.active ? '#0165E1' : '#ffffff',
+                                                            border: item.active ? '1px solid #0165E1' : '1px solid #BCBCBC',
+                                                            boxShadow: item.active ? ' 0px 4px 4px rgba(0, 0, 0, 0.25)' : '',
                                                         }}
                                                     >
-                                                        {item.active ?
-                                                            <svg width="8" height="8" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5 1L1 5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                <path d="M1 1L5 5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>
-                                                            :
-                                                            <svg width="8" height="8" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5 1L1 5" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                <path d="M1 1L5 5" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>
+                                                        {show_edit_icon &&
+                                                        <button
+                                                            className='product_detail_item_delete_btn'
+                                                            style={{
+                                                                background: item.active ? '#00C5F295' : '#bcbcbc54',
+                                                                // opacity: 0.32
+                                                            }}
+                                                        >
+                                                            {item.active ?
+                                                                <svg width="8" height="8" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 1L1 5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M1 1L5 5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                :
+                                                                <svg width="8" height="8" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 1L1 5" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M1 1L5 5" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            }
+
+
+                                                        </button>
                                                         }
 
-
-                                                    </button>
-                                                   <span
-                                                       className='product_detail_item_title'
-                                                       style={{
-                                                           color: item.active ? '#ffffff' : '#323232',
-                                                           fontWeight: item.active ? '500' : '400',
-                                                       }}
-                                                   >
+                                                        <span
+                                                            className='product_detail_item_title'
+                                                            style={{
+                                                                color: item.active ? '#ffffff' : '#323232',
+                                                                fontWeight: item.active ? '500' : '400',
+                                                            }}
+                                                        >
                                                        {item.text}
                                                    </span>
-                                                </div>
+                                                    </div>
 
-                                            );
-                                        })}
+                                                );
+                                            })}
 
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </section>
@@ -268,12 +283,15 @@ export default function NewCatalog () {
                         <div className='creating_new_feature_popup'>
                             <div className='creating_new_feature_popup_wrapper'>
                                 <h1 className='creating_new_feature_popup_title'>Создание новой характеристики</h1>
-                                <button className='creating_new_feature_popup_close_btn' onClick={() => {
-                                   setShowCreatingNewFeature(false)
-                                   enableBodyScroll()
-                                }}>
-                                    <img src={close_icon}/>
-                                </button>
+                                {/*<button */}
+                                {/*    className='creating_new_feature_popup_close_btn' */}
+                                {/*    onClick={() => {*/}
+                                {/*       setShowCreatingNewFeature(false)*/}
+                                {/*       enableBodyScroll()*/}
+                                {/*    }}*/}
+                                {/*>*/}
+                                {/*    <img src={close_icon}/>*/}
+                                {/*</button>*/}
                                 <div className='creating_new_feature_popup_input_wrapper'>
                                     <input type="text" name="feature" value={new_feature}
                                            onChange={(e) => this.setState({
@@ -284,7 +302,15 @@ export default function NewCatalog () {
                                            className='creating_new_feature_popup_input_field' />
                                 </div>
                                 <div className='creating_new_feature_popup_buttons_wrapper'>
-                                    <button className='creating_new_feature_popup_cancel_button'>Отмена</button>
+                                    <button
+                                        className='creating_new_feature_popup_cancel_button'
+                                        onClick={() => {
+                                            setShowCreatingNewFeature(false)
+                                            enableBodyScroll()
+                                        }}
+                                    >
+                                        Отмена
+                                    </button>
                                     <button className='creating_new_feature_popup_add_button'>Добавить</button>
                                 </div>
                             </div>

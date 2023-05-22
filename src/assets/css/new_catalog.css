@@ -8,8 +8,8 @@
     padding: 30px 30px 0 30px;
     cursor: pointer;
     width: 100%;
-    margin-top: 30px;
-    margin-right: 30px;
+    /*margin-top: 30px;*/
+    /*margin-right: 30px;*/
 }
 .product_detail_title_buttons_wrapper{
     display: flex;
@@ -249,3 +249,14 @@
     justify-content: center;
     align-items: center;
 }
+
+.product_detail_wrapper_main {
+    width: 100%;
+    margin-top: 30px;
+    /* margin-right: 30px; */
+    overflow: scroll;
+    height: calc(100vh - 97px);
+    padding-bottom: 50px;
+    padding-right: 30px;
+}
+

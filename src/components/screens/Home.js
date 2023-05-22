@@ -843,9 +843,9 @@
                                      </div>
 
                                      <div className='constructor_item2_mobile_design'>
-                                         <div className='constructor_item2_mobile_design_img'>
-                                             <img src={require('../../assets/img/mobile_border_img.png')}/>
-                                         </div>
+                                         {/*<div className='constructor_item2_mobile_design_img'>*/}
+                                         {/*    <img src={require('../../assets/img/mobile_border_img.png')}/>*/}
+                                         {/*</div>*/}
                                          <div
                                              className='constructor_item2_mobile_design_wrapper'
                                              style={{
