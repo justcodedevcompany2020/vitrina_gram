@@ -209,14 +209,30 @@ export default function NewCatalog () {
                                                     <img src={add_btn_icon}/>
                                                 </span>
                                                 </button>
-                                                <button
-                                                    className='product_detail_edit_btn'
-                                                    onClick={() => {
-                                                        setShowEditIcon(!show_edit_icon)
-                                                    }}
-                                                >
-                                                    Редактировать
-                                                </button>
+
+                                                {show_edit_icon ?
+                                                    <button
+                                                        className='product_detail_edit_btn'
+                                                        onClick={() => {
+                                                            setShowEditIcon(false)
+                                                        }}
+                                                    >
+                                                        Сохранить
+                                                    </button>
+
+
+                                                    :
+                                                    <button
+                                                        className='product_detail_edit_btn'
+                                                        onClick={() => {
+                                                            setShowEditIcon(true)
+                                                        }}
+                                                    >
+                                                        Редактировать
+                                                    </button>
+
+                                                }
+
                                             </div>
 
                                         </div>
