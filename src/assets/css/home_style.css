@@ -57,13 +57,13 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 12px;
+    /*line-height: 12px;*/
     color: #D8DFEA;
     display: block;
     cursor: pointer;
     outline: none;
     text-decoration: none;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
 }
 
 .constructor_item_link:hover {
@@ -722,3 +722,4 @@ body {
     }
 }
 /*media  end*/
+

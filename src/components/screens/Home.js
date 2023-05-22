@@ -605,6 +605,7 @@
          console.log(name_input_value)
 
      };
+
      return (
          <>
 
@@ -615,7 +616,12 @@
                          <div className="constructor_wrapper">
                              <div className='constructor_items_wrapper'>
                                  <div className='constructor_item1'>
-                                     <Link className="constructor_item_link">
+                                     <Link
+                                         className="constructor_item_link"
+                                         style={{
+                                             color: '#00C5F2'
+                                         }}
+                                     >
                                          Основное
                                      </Link>
                                      <Link className="constructor_item_link">

@@ -107,12 +107,15 @@
 
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+
+
 import { Link as LinkScroll } from 'react-scroll';
 // import { isMobile, isIOS, isAndroid, isTablet } from 'react-device-detect'
 import '../../../assets/css/header_style.css';
 import logo from '../../../assets/svg/logo.svg';
 import catalog from '../../../assets/svg/catalog.svg';
+import catalog_active from '../../../assets/svg/catalog_active.svg';
 import client from '../../../assets/svg/client.svg';
 import constructor from '../../../assets/svg/constructor.svg';
 import dialogs from '../../../assets/svg/dialogs.svg';
@@ -125,6 +128,7 @@ import notification from '../../../assets/svg/notification.svg';
 import { Switch } from 'react-switch-input';
 import hamburger_icon from '../../../assets/svg/hamburger_icon.svg';
 import close_icon from '../../../assets/svg/close.svg';
+import constructor_no_active from '../../../assets/svg/constructor_no_active.svg';
 
 
 const sl_set = {
@@ -160,6 +164,7 @@ export default function Header(props) {
             window.history.scrollRestoration = 'manual';
         }
 
+
         window.addEventListener('load', handleLoad);
         window.addEventListener('scroll', handleScroll);
 
@@ -181,6 +186,14 @@ export default function Header(props) {
         }
     };
 
+    const  pathName = () => {
+        let name = window.location.pathname;
+        console.log(name, 'nameee')
+        return name
+    }
+
+
+
     return (
         <>
 
@@ -193,20 +206,45 @@ export default function Header(props) {
                     </div>
                     <div className='header_child'>
                         <div className="headers_navigation_links_wrapper">
-                            <Link className="headers_navigation_link">
+                            <Link to={'/'} className="headers_navigation_link">
                                 <div className='headers_navigation_link_img'>
-                                    {/*<img src={constructor}/>*/}
-                                    <svg width="40" height="33" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35 5.41672V32.5032C35 32.5032 20 31.5345 20 35C20 35 20 16.5924 20 9.36518C20 3.45829 35 5.41672 35 5.41672Z" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 5.41672V32.5032L6.24943 32.4288V32.4288L7.44454 32.3704V32.3704L8.58533 32.3281V32.3281L9.6718 32.3019C9.84835 32.2989 10.0226 32.2965 10.1947 32.2948L11.1996 32.2927V32.2927L12.1503 32.3066V32.3066L13.0466 32.3365V32.3365L13.8886 32.3826C14.1603 32.4006 14.4228 32.4213 14.6763 32.4447L15.4097 32.5228C18.3522 32.8819 19.88 33.6591 19.9932 34.8546L20 34.9436V34.9436V9.36518V9.36518C20 6.15055 16.6681 4.68303 10.0042 4.96264L8.97959 5.01768C8.80466 5.02904 8.62765 5.04149 8.44856 5.05503L7.34902 5.14939C6.97418 5.18521 6.591 5.22539 6.1995 5.26995L5 5.41672V5.41672Z" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                                    {pathName() == '/' ?
+                                        <svg width="40" height="33" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect opacity="0.2" x="2" y="12" width="28" height="17" fill="#0165E1"/>
+                                            <circle cx="8" cy="17" r="2.25" stroke="#0165E1" stroke-width="1.5"/>
+                                            <circle cx="16" cy="17" r="2.25" stroke="#0165E1" stroke-width="1.5"/>
+                                            <circle cx="24" cy="17" r="2.25" stroke="#0165E1" stroke-width="1.5"/>
+                                            <circle cx="8" cy="24" r="2.25" stroke="#0165E1" stroke-width="1.5"/>
+                                            <circle cx="16" cy="24" r="2.25" stroke="#0165E1" stroke-width="1.5"/>
+                                            <circle cx="24" cy="24" r="2.25" stroke="#0165E1" stroke-width="1.5"/>
+                                            <mask id="path-8-inside-1_1615_7179" fill="white">
+                                                <rect x="32.3027" width="32" height="6" rx="1" transform="rotate(62.0943 32.3027 0)"/>
+                                            </mask>
+                                            <rect x="32.3027" width="45" height="6" rx="1" transform="rotate(62.0943 32.3027 0)" fill="#0165E1" stroke="#0165E1" stroke-width="6" mask="url(#path-8-inside-1_1615_7179)"/>
+                                            <path d="M35.7604 4.3923C36.0045 4.26306 36.3071 4.35612 36.4363 4.60015L38.3084 8.13503C38.4376 8.37906 38.3446 8.68166 38.1005 8.8109L37.6587 9.0449L35.3186 4.62631L35.7604 4.3923Z" fill="#0165E1" stroke="#0165E1"/>
+                                            <path d="M39.5046 11.4616C39.7486 11.3324 40.0512 11.4255 40.1805 11.6695L42.0525 15.2044C42.1818 15.4484 42.0887 15.751 41.8447 15.8802L41.4028 16.1142L39.0627 11.6956L39.5046 11.4616Z" fill="#0165E1" stroke="#0165E1"/>
+                                            <path d="M43.2478 18.5315C43.4918 18.4022 43.7944 18.4953 43.9236 18.7393L45.7957 22.2742C45.9249 22.5182 45.8319 22.8208 45.5878 22.9501L45.146 23.1841L42.8059 18.7655L43.2478 18.5315Z" fill="#0165E1" stroke="#0165E1"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 13H3V14V27V28H4H28H29V27V14V13H28H4ZM0 14C0 11.7909 1.79086 10 4 10H28C30.2091 10 32 11.7909 32 14V27C32 29.2091 30.2091 31 28 31H4C1.79086 31 0 29.2091 0 27V14Z" fill="#0165E1"/>
+                                        </svg>
+
+                                        :
+                                        <img src={constructor_no_active}/>
+                                    }
+
+
 
                                 </div>
                                 <p className='headers_navigation_link_title'>Конструктор</p>
                             </Link>
-                            <Link className="headers_navigation_link">
+                            <Link to={'/new_catalog'} className="headers_navigation_link">
                                 <div className='headers_navigation_link_img'>
-                                    <img src={catalog}/>
+                                    {pathName() == '/new_catalog' ?
+                                        <img src={catalog_active}/>
+                                        :
+                                        <img src={catalog}/>
+                                    }
+
+
                                 </div>
                                 <p className='headers_navigation_link_title'>Каталог</p>
                             </Link>
@@ -283,8 +321,9 @@ export default function Header(props) {
                         </div>
 
                         <button className='hamburger_menu_btn' onClick={() => {
-                            setShowMobileMenu(true)
-                            disableBodyScroll()
+                            // setShowMobileMenu(true)
+                            // disableBodyScroll()
+                            home()
                         }}>
                             <img src={hamburger_icon}/>
                         </button>
