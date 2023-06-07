@@ -121,6 +121,7 @@ import constructor from '../../../assets/svg/constructor.svg';
 import dialogs from '../../../assets/svg/dialogs.svg';
 import integration from '../../../assets/svg/integration.svg';
 import newsletter from '../../../assets/svg/newsletter.svg';
+import newsletter_active from '../../../assets/svg/newsletter_active.svg';
 import order from '../../../assets/svg/order.svg';
 import settings from '../../../assets/svg/settings.svg';
 import statistic from '../../../assets/svg/statistic.svg';
@@ -272,9 +273,14 @@ export default function Header(props) {
                                 </div>
                                 <p className='headers_navigation_link_title'>Статистика</p>
                             </Link>
-                            <Link className="headers_navigation_link">
+                            <Link to={'/newsletter'} className="headers_navigation_link">
                                 <div className='headers_navigation_link_img'>
-                                    <img src={newsletter}/>
+                                    {pathName() == '/newsletter' || pathName() == '/sent_newsletter' ?
+                                        <img src={newsletter_active}/>
+                                        :
+                                        <img src={newsletter}/>
+                                    }
+
                                 </div>
                                 <p className='headers_navigation_link_title'>Рассылка</p>
                             </Link>

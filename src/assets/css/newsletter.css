@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+.newsletter_main_wrapper {
+    width: 100%;
+    margin-top: 30px;
+    /* margin-right: 30px; */
+    overflow: scroll;
+    height: calc(100vh - 97px);
+    padding-bottom: 50px;
+    padding-right: 30px;
+}
+
+.newsletter_wrapper {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px 30px 0 30px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.newsletter_items_wrapper {
+    width: 100%;
+}
+.newsletter_item_names_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #B2B8BE;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.container2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark2 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark2 {
+    background-color: #181818;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container2 input:checked ~ .checkmark2 {
+    background-color: #181818;
+
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container2 input:checked ~ .checkmark2:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container2 .checkmark2:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 6px;
+    height: 5px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, 50%)
+}
+
+.newsletter_item_name {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #323232;
+    text-align: center;
+}
+
+.make_newsletter_btn {
+    background: #0165E1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px;
+}
+.make_newsletter_btn_title {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-left: 12px;
+}
+
+/*.newsletter_item_name_box {*/
+/*    flex: 1;*/
+/*}*/
+
+.newsletter_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(188, 188, 188, 0.5);
+    border-radius: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.newsletter_item_child_name {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #181818;
+
+}
+
+.newsletter_item_child_name2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #7B7B7B;
+    text-align: center;
+}
+.newsletter_item_child_delete_btn {
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.newsletter_item_child {
+    flex: 1;
+}
+
+.newsletter_item_name_box {
+    flex: 1;
+}
+
+
+
+.css-13cymwt-control {
+    background-color: unset!important;
+    border: unset!important;
+    min-height: unset!important;
+}
+.css-1xc3v61-indicatorContainer svg {
+    fill: #292D32!important;
+}
+.newsletter_item_child2 {
+    display: flex;
+    align-items: center;
+    flex: 1
+}
+
+
+.css-1fdsijx-ValueContainer {
+    display: none!important;
+}
+
+.newsletter_item_child_select_title {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #BE0000;
+    margin-right: 5px;
+
+}
+
+.newsletter_item_child_select_title2 {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #31BE00;
+    margin-right: 5px;
+
+}
+
+.css-1nmdiq5-menu {
+    width: 170px!important;
+}
