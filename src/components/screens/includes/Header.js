@@ -130,6 +130,7 @@ import { Switch } from 'react-switch-input';
 import hamburger_icon from '../../../assets/svg/hamburger_icon.svg';
 import close_icon from '../../../assets/svg/close.svg';
 import constructor_no_active from '../../../assets/svg/constructor_no_active.svg';
+import dialog_active from '../../../assets/svg/dialog_active.svg';
 
 
 const sl_set = {
@@ -284,9 +285,14 @@ export default function Header(props) {
                                 </div>
                                 <p className='headers_navigation_link_title'>Рассылка</p>
                             </Link>
-                            <Link className="headers_navigation_link">
+                            <Link to={'/messages'} className="headers_navigation_link">
                                 <div className='headers_navigation_link_img'>
-                                    <img src={dialogs}/>
+                                    {pathName() == '/messages'  ?
+                                        <img src={dialog_active}/>
+                                        :
+                                        <img src={dialogs}/>
+                                    }
+
                                 </div>
                                 <p className='headers_navigation_link_title'>Диалоги</p>
                             </Link>

@@ -2,16 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 import '../../assets/css/home_style.css';
-import '../../assets/css/newsletter.css';
+import '../../assets/css/setnewsletter.css';
 import Header from "./includes/Header";
-import DropzoneForLogo from "./includes/DropzoneForLogo";
-import DropzoneForBanner from "./includes/DropzoneForBanner";
+import DropzoneForImage from "./includes/DropzoneForImage";
 import Select from 'react-select'
 import { Switch } from "react-switch-input";
-import add_btn_icon from  '../../assets/svg/add_btn_icon.svg'
-import make_newsletter from '../../assets/svg/make_newsletter_icon.svg'
-import newsletter from "../../assets/svg/newsletter.svg";
-import trash from "../../assets/svg/trash_icon.svg";
+import textarea_icon from  '../../assets/svg/textarea_icon.svg'
+
 
 
 let sl_set = {};
@@ -26,12 +23,8 @@ export default function Newsletter () {
     ]);
     const [value, setValue] = useState(undefined);
     const [headerScroll, setHeaderScroll] = useState(false);
-    const [show_creating_new_feature, setShowCreatingNewFeature] = useState(false);
-    const [show_edit_icon, setShowEditIcon] = useState(false);
-    const [new_feature, setNewFeature] = useState('');
-    const [selectedAllTypes, setSelectedAllTypes] = useState('');
-    const [selectedNewsletter1, setSelectedNewsletter1] = useState('');
-    const [selectedNewsletter2, setSelectedNewsletter2] = useState('');
+    const [selectedNewsletter3, setSelectedNewsletter3] = useState('');
+
 
 
     useEffect(() => {
@@ -90,19 +83,22 @@ export default function Newsletter () {
         document.body.style.overflow = "auto";
     };
 
-    const handleOptionChange = (changeEvent) => {
-        setSelectedAllTypes(changeEvent.target.value);
+    const [name_newsletter, setNameNewsletter] = useState('');
+    const [event_name, setEventName] = useState('');
+
+    const setNewsletter = (event) => {
+        setNameNewsletter(event.target.value);
+        console.log(name_newsletter)
 
     };
-
-
-    const handleOptionChange2 = (changeEvent) => {
-        setSelectedNewsletter1(changeEvent.target.value);
+    const setEventName2 = (event) => {
+        setEventName(event.target.value);
+        console.log(event_name)
 
     };
 
     const handleOptionChange3 = (changeEvent) => {
-        setSelectedNewsletter2(changeEvent.target.value);
+        setSelectedNewsletter3(changeEvent.target.value);
 
     };
 
@@ -135,7 +131,83 @@ export default function Newsletter () {
                                     </Link>
 
                                 </div>
+                                <div className='setNewsletter_wrapper'>
+                                    <div className='setNewsletter_items_wrapper'>
+                                        <div className="setNewsletter_item">
+                                            <div className='setNewsletter_item_input_title_wrapper'>
+                                                <p className='setNewsletter_item_input_title'>Название рассылки</p>
+                                                <input
+                                                    type='text'
+                                                    name='name_newsletter'
+                                                    className='setNewsletter_item_input_field'
+                                                    placeholder='Ввести название рассылки'
+                                                    value={name_newsletter}
+                                                    onChange={setNewsletter}
+                                                />
+                                            </div>
+                                            <div className='setNewsletter_item_input_title_wrapper'>
+                                                <p className='setNewsletter_item_input_title'>Название события</p>
+                                                <input
+                                                    type='text'
+                                                    name='event_name'
+                                                    className='setNewsletter_item_input_field'
+                                                    placeholder='Ввести название события'
+                                                    value={event_name}
+                                                    onChange={setEventName2}
+                                                />
+                                            </div>
+                                            <div className='setNewsletter_item_textarea_img_title_wrapper'>
+                                                <p className='setNewsletter_item_textarea_title'>Введите текст сообщения</p>
+                                                <div className='setNewsletter_item_textarea_img_field_wrapper'>
+                                                    <div className='setNewsletter_item_textarea_img'>
+                                                        <img src={textarea_icon}/>
+                                                    </div>
+                                                    <textarea name="message" className='setNewsletter_item_textarea_field'>Текст сообщения</textarea>
+                                                </div>
+                                            </div>
+                                            <DropzoneForImage/>
+                                        </div>
+                                        <div className="setNewsletter_item">
+                                            <div className="setNewsletter_item_select">
+                                                <p className='setNewsletter_item_select_title'>Дополнительные настройки</p>
+                                                <Select placeholder="" id='setNewsletter_select' options={options1} />
+                                            </div>
+                                            <div className='setNewsletter_item_check_input_wrapper'>
+                                                <label className='container3'>
+                                                    <input
+                                                        type='radio'
+                                                        name='newsletter'
+                                                        value='newsletter'
+                                                        checked={selectedNewsletter3 === 'newsletter'}
+                                                        onChange={handleOptionChange3}
+                                                    />
 
+
+                                                    <span className='checkmark3'></span>
+                                                    <p className='setNewsletter_item_check_input_title'>Отключить уведомления без звука</p>
+                                                </label>
+                                            </div>
+                                            <div className='setNewsletter_item_calendar_wrapper'>
+                                                <div className='setNewsletter_item_calendar_title_btn_wrapper'>
+                                                    <p className='setNewsletter_item_calendar_title'>Дата отправки рассылки</p>
+                                                    <button className='setNewsletter_item_calendar_delete_btn'>Очистить</button>
+                                                </div>
+                                                <div className='setNewsletter_item_calendar_box'></div>
+                                            </div>
+                                            <div className='setNewsletter_item_hour_wrapper'>
+                                                <div className='setNewsletter_item_hour_title_btn_wrapper'>
+                                                    <p className='setNewsletter_item_hour_title'>Время отправки рассылки</p>
+                                                    <button className='setNewsletter_item_hour_delete_btn'>Очистить</button>
+                                                </div>
+                                                <div className='setNewsletter_item_our_box'></div>
+                                            </div>
+                                            <div className='setNewsletter_item_buttons_wrapper'>
+                                                <button className='setNewsletter_item_save_button'>Сохранить в черновик</button>
+                                                <button className='setNewsletter_item_send_button'>Отправить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
