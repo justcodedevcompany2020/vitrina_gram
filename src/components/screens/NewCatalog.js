@@ -200,7 +200,7 @@ export default function NewCatalog () {
                                                     className='product_detail_add_btn'
                                                     onClick={() => {
                                                         setShowCreatingNewFeature(true)
-                                                        disableBodyScroll()
+                                                        // disableBodyScroll()
 
                                                     }}
                                                 >
@@ -322,7 +322,7 @@ export default function NewCatalog () {
                                         className='creating_new_feature_popup_cancel_button'
                                         onClick={() => {
                                             setShowCreatingNewFeature(false)
-                                            enableBodyScroll()
+                                            // enableBodyScroll()
                                         }}
                                     >
                                         Отмена

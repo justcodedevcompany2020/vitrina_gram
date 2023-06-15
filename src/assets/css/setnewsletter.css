@@ -6,13 +6,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 
-.css-13cymwt-control {
+#setNewsletter_select .css-13cymwt-control {
     background-color: unset!important;
     border: unset!important;
-    min-height: unset!important;
+    /*min-height: unset!important;*/
 }
 #setNewsletter_select .css-1xc3v61-indicatorContainer svg {
     fill: #0165E1!important;
+}
+#setNewsletter_select .css-1u9des2-indicatorSeparator {
+    display: none!important;
+}
+#setNewsletter_select .css-qbdosj-Input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500!important;
+    font-size: 18px!important;
+    color: #0165E1!important;
+}
+#setNewsletter_select .css-1dimb5e-singleValue {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500!important;
+    font-size: 18px!important;
+    color: #0165E1!important;
+}
+#setNewsletter_select .css-1jqq78o-placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500!important;
+    font-size: 18px!important;
+    color: #0165E1!important;
 }
 .newsletter_item_child2 {
     display: flex;
@@ -21,9 +45,11 @@
 }
 
 
-.css-1fdsijx-ValueContainer {
-    display: none!important;
+#setNewsletter_select .css-1fdsijx-ValueContainer {
+    /*display: none!important;*/
+    padding: unset!important;
 }
+
 
 .newsletter_item_child_select_title {
     font-family: 'Inter',sans-serif;
@@ -82,16 +108,16 @@
     margin-right: 16px;
 }
 
-/* On mouse-over, add a grey background color */
-.container3:hover input ~ .checkmark3 {
-    background-color: #0165E1;
-}
+/*!* On mouse-over, add a grey background color *!*/
+/*.container3:hover input ~ .checkmark3 {*/
+/*    background-color: #0165E1;*/
+/*}*/
 
-/* When the checkbox is checked, add a blue background */
-.container3 input:checked ~ .checkmark3 {
-    background-color: #0165E1;
+/*!* When the checkbox is checked, add a blue background *!*/
+/*.container3 input:checked ~ .checkmark3 {*/
+/*    background-color: #0165E1;*/
 
-}
+/*}*/
 
 .setNewsletter_wrapper {
     width: 100%;
@@ -117,11 +143,12 @@
     background-image: url("../svg/news_check_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 6px;
-    height: 5px;
+    background-color: #0165E1;
+    width: 15px;
+    height: 15px;
     left: 50%;
     top: 9%;
-    transform: translate(-50%, 50%)
+    transform: translate(-50%, -12%)
 }
 
 .setNewsletter_wrapper {
@@ -375,4 +402,35 @@
     align-items: center;
     border: none;
     height: 50px;
+}
+
+@media (max-width: 1350px) {
+    .setNewsletter_item_save_button {
+        font-size: 15px!important;
+    }
+    .setNewsletter_item_send_button {
+        font-size: 15px!important;
+    }
+    .setNewsletter_item_input_field {
+        font-size: 16px!important;
+
+    }
+    .setNewsletter_item_input_field::placeholder {
+        font-size: 16px!important;
+    }
+    .setNewsletter_item_textarea_field {
+        font-size: 16px!important;
+
+    }
+    .setNewsletter_item_textarea_field::placeholder {
+        font-size: 16px!important;
+
+    }
+    .setNewsletter_item_calendar_title {
+        font-size: 16px!important;
+    }
+    .setNewsletter_item_hour_delete_btn {
+        font-size: 16px!important;
+
+    }
 }

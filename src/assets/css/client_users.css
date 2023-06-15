@@ -1,0 +1,1499 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.client_user_main_wrapper {
+    width: 100%;
+    margin-top: 30px;
+    /* margin-right: 30px; */
+    overflow: scroll;
+    height: calc(100vh - 97px);
+    padding-bottom: 30px;
+    padding-right: 30px;
+}
+
+.client_user_wrapper {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1596px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.client_user_header_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(188, 188, 188, 0.5);
+}
+
+
+.client_user_header_search_input_icon_wrapper {
+    border: 1.5px solid rgba(188, 188, 188, 0.6);
+    border-radius: 31px;
+    width: 100%;
+    max-width: 494px;
+    height: 43px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client_user_header_search_input_field {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #BCBCBC;
+    width: 90%;
+}
+
+.client_user_header_search_input_field::placeholder {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #BCBCBC;
+}
+
+.client_user_header_search_input_icon {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: none;
+}
+
+#client_all_users_select .css-13cymwt-control {
+    border: 1.5px solid rgba(188, 188, 188, 0.6)!important;
+    border-radius: 5px!important;
+    min-height: 43px!important;
+    width: 100%;
+    max-width: 243px;
+}
+
+#client_channel_select .css-13cymwt-control {
+    border: 1.5px solid rgba(188, 188, 188, 0.6)!important;
+    border-radius: 5px!important;
+    min-height: 43px!important;
+    width: 100%;
+    max-width: 243px;
+}
+
+#client_all_users_select .css-1u9des2-indicatorSeparator {
+    display: none!important;
+}
+#client_channel_select .css-1u9des2-indicatorSeparator {
+    display: none!important;
+}
+#client_all_users_select .css-1xc3v61-indicatorContainer {
+    color: #0165E1;
+}
+
+#client_channel_select .css-1xc3v61-indicatorContainer {
+    color: #0165E1;
+}
+
+#client_channel_select .css-qbdosj-Input input{
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+
+#client_all_users_select .css-qbdosj-Input input {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+#client_channel_select .css-qbdosj-Input input::placeholder {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+
+#client_all_users_select .css-qbdosj-Input input::placeholder {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+
+#client_channel_select .css-qbdosj-Input {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+
+#client_all_users_select .css-qbdosj-Input {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+.client_user_header_add_user_btn {
+    background: #00C5F2;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 273px;
+    height: 43px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client_user_header_add_user_btn_title {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-left: 12px;
+}
+
+.client_user_header_btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    margin-right: 20px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client_user_header_btn2 {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client_user_header_settings_btn {
+    background: #0165E1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 66px;
+    height: 43px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.show_settings_menu {
+    background: #0165E1;
+    border-radius: 5px 0px 5px 5px;
+    position: absolute;
+    z-index: 9;
+    padding: 12px;
+    width: 350px;
+    right: 0;
+}
+
+
+
+.container10 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+}
+
+/* Hide the browser's default checkbox */
+.container10 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark10 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark10:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container10 input:checked ~ .checkmark10:after {
+    display: block
+}
+
+/* Style the checkmark/indicator */
+.container10 .checkmark10:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+    /*display: none;*/
+}
+
+.container11 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container11 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark11 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark11:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container11 input:checked ~ .checkmark11:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container11 .checkmark11:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+
+.container12 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container12 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark12 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark12:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container12 input:checked ~ .checkmark12:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container12 .checkmark12:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container13 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container13 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark13 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark13:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container13 input:checked ~ .checkmark13:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container13 .checkmark13:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container14 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container14 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark14 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark14:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container14 input:checked ~ .checkmark14:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container14 .checkmark14:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container15 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container15 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark15 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark15:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container15 input:checked ~ .checkmark15:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container15 .checkmark15:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container16 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container16 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark16 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark16:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container16 input:checked ~ .checkmark16:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container16 .checkmark16:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container17 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container17 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark17 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark17:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container17 input:checked ~ .checkmark17:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container17 .checkmark17:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container18 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container18 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark18 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark18:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container18 input:checked ~ .checkmark18:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container18 .checkmark18:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container19 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container19 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark19 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark19:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container19 input:checked ~ .checkmark19:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container19 .checkmark19:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container20 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container20 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark20 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark20:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container20 input:checked ~ .checkmark20:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container20 .checkmark20:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container21 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container21 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark21 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark21:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container21 input:checked ~ .checkmark21:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container21 .checkmark21:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container22 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container22 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark22 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark22:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container22 input:checked ~ .checkmark22:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container22 .checkmark22:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container23 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container23 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark23 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark23:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container23 input:checked ~ .checkmark23:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container23 .checkmark23:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container24 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container24 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark24 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark24:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container24 input:checked ~ .checkmark24:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container24 .checkmark24:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.container25 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 15px
+
+}
+
+/* Hide the browser's default checkbox */
+.container25 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark25 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark25:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container25 input:checked ~ .checkmark25:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container25 .checkmark25:after {
+    content: '';
+    background-image: url("../svg/news_check_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -7%);
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.settings_menu_item {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.settings_wrapper {
+    position: relative;
+}
+
+.p-checkbox-box.p-component {
+    border: 1px solid #181818!important;
+    border-radius: 3px!important;
+    width: 15px!important;
+    height: 15px!important;
+}
+.p-checkbox {
+    width: 15px!important;
+    height: 15px!important;
+}
+
+.p-column-title {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #323232;
+}
+
+/*media*/
+
+
+@media (min-width: 1602px) and (max-width: 1750px) {
+    .client_user_header_search_input_icon_wrapper {
+        max-width: 420px!important;
+    }
+    .client_user_header_add_user_btn {
+        max-width: 250px!important;
+    }
+    .client_user_header_add_user_btn_title {
+        font-size: 14px!important;
+    }
+    .client_user_header_add_user_btn_icon {
+        height: 22px!important;
+    }
+    .client_user_header_btn {
+        margin-left: unset!important;
+        margin-right: unset!important;
+    }
+    .client_user_header_btn2 {
+        margin-right: unset!important;
+    }
+}
+@media (min-width: 1425px) and  (max-width: 1601px) {
+    .client_user_header_search_input_icon_wrapper {
+        max-width: 320px!important;
+    }
+    .client_user_header_add_user_btn {
+        max-width: 220px!important;
+    }
+    .client_user_header_add_user_btn_title {
+        font-size: 13px!important;
+    }
+    .client_user_header_add_user_btn_icon {
+        height: 22px!important;
+    }
+    .client_user_header_btn {
+        margin-left: unset!important;
+        margin-right: unset!important;
+    }
+    .client_user_header_btn2 {
+        margin-right: unset!important;
+    }
+}
+@media (min-width: 1325px) and  (max-width: 1424px) {
+    .client_user_header_search_input_icon_wrapper {
+        max-width: 280px!important;
+    }
+    .client_user_header_add_user_btn {
+        max-width: 200px!important;
+    }
+    .client_user_header_add_user_btn_title {
+        font-size: 12px!important;
+        margin-left: 6px!important;
+    }
+    .client_user_header_search_input_field {
+        font-size: 14px!important;
+        width: 72% !important
+    }
+    .client_user_header_search_input_field::placeholder {
+        font-size: 14px!important;
+    }
+    .client_user_header_add_user_btn_icon {
+        height: 18px!important;
+    }
+    .client_user_header_btn {
+        margin-left: unset!important;
+        margin-right: unset!important;
+    }
+    .client_user_header_btn2 {
+        margin-right: unset!important;
+    }
+    .client_user_header_wrapper {
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+    }
+    .client_user_header_add_user_btn_icon img {
+        width: 18px!important;
+        height: 18px!important;
+    }
+    .client_user_header_btn img {
+        width: 26px!important;
+        height: 26px!important;
+    }
+    .client_user_header_btn2 img {
+        width: 26px!important;
+        height: 26px!important;
+    }
+}
+@media (min-width: 1251px) and (max-width: 1324px) {
+    .client_user_header_search_input_icon_wrapper {
+        max-width: 220px!important;
+    }
+    .client_user_header_add_user_btn {
+        max-width: 180px!important;
+    }
+    .client_user_header_add_user_btn_title {
+        font-size: 11px!important;
+        margin-left: 6px!important;
+    }
+    .client_user_header_search_input_field {
+        font-size: 13px!important;
+        width: 72% !important
+    }
+    .client_user_header_search_input_field::placeholder {
+        font-size: 13px!important;
+    }
+    .client_user_header_add_user_btn_icon {
+        height: 18px!important;
+    }
+    .client_user_header_btn {
+        margin-left: unset!important;
+        margin-right: unset!important;
+    }
+    .client_user_header_btn2 {
+        margin-right: unset!important;
+    }
+    .client_user_header_wrapper {
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+    }
+    .client_user_header_add_user_btn_icon img {
+        width: 16px!important;
+        height: 16px!important;
+    }
+    .client_user_header_btn img {
+        width: 24px!important;
+        height: 24px!important;
+    }
+    .client_user_header_btn2 img {
+        width: 24px!important;
+        height: 24px!important;
+    }
+    .client_user_header_settings_btn {
+        width: 54px!important;
+        padding-left: 7px!important;
+        padding-right: 7px!important;
+    }
+    .client_user_header_settings_btn_icon1 img {
+        width: 20px!important;
+        height: 20px!important;
+    }
+}
+@media (max-width: 1250px) {
+    .client_user_header_search_input_icon_wrapper {
+        max-width: 200px!important;
+    }
+    .client_user_header_add_user_btn {
+        max-width: 180px!important;
+    }
+    .client_user_header_add_user_btn_title {
+        font-size: 11px!important;
+        margin-left: 6px!important;
+    }
+    .client_user_header_search_input_field {
+        font-size: 12px!important;
+        width: 72% !important
+    }
+    .client_user_header_search_input_field::placeholder {
+        font-size: 12px!important;
+    }
+    .client_user_header_add_user_btn_icon {
+        height: 18px!important;
+    }
+    .client_user_header_btn {
+        margin-left: unset!important;
+        margin-right: unset!important;
+    }
+    .client_user_header_btn2 {
+        margin-right: unset!important;
+    }
+    .client_user_header_wrapper {
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+    }
+    .client_user_header_add_user_btn_icon img {
+        width: 16px!important;
+        height: 16px!important;
+    }
+    .client_user_header_btn img {
+        width: 22px!important;
+        height: 22px!important;
+    }
+    .client_user_header_btn2 img {
+        width: 22px!important;
+        height: 22px!important;
+    }
+    .client_user_header_settings_btn {
+        width: 50px!important;
+        height: 38px!important;
+        padding-left: 7px!important;
+        padding-right: 7px!important;
+    }
+    .client_user_header_settings_btn_icon1 img {
+        width: 18px!important;
+        height: 18px!important;
+    }
+}
+
+@media (min-width: 1426px) and (max-width: 1750px) {
+    .p-datatable .p-datatable-tbody > tr > td {
+        padding: 16px 10px!important;
+        font-size: 14px!important;
+    }
+    .p-datatable .p-datatable-thead > tr > th {
+        padding: 16px 10px!important;
+    }
+    .p-column-title {
+        font-size: 16px!important;
+    }
+}
+
+@media (min-width: 1251px) and (max-width: 1425px) {
+    .p-datatable .p-datatable-tbody > tr > td {
+        padding: 14px 6px!important;
+        font-size: 12px!important;
+    }
+    .p-datatable .p-datatable-thead > tr > th {
+        padding: 14px 6px!important;
+    }
+    .p-column-title {
+        font-size: 14px!important;
+    }
+}
+@media (max-width: 1250px) {
+    .p-datatable .p-datatable-tbody > tr > td {
+        padding: 12px 6px!important;
+        font-size: 11px!important;
+    }
+    .p-datatable .p-datatable-thead > tr > th {
+        padding: 12px 6px!important;
+    }
+    .p-column-title {
+        font-size: 13px!important;
+    }
+    .table_img {
+        width: 12px!important;
+        height: 12px!important;
+        position: relative;
+        top: 2px
+    }
+}

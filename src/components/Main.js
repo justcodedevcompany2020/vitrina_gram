@@ -8,6 +8,8 @@ import ProductCategories from './screens/ProductCategories'
 import Newsletter from './screens/Newsletter'
 import SentNewsletter from './screens/SentNewsletter'
 import Messages from './screens/Messages'
+import ClientUsers from './screens/ClientsUsers'
+import NewClientCard from './screens/NewClientCard'
 
 
 require('es6-promise').polyfill();
@@ -23,6 +25,8 @@ export default class Main extends React.Component {
                 <Route path="/newsletter" element={<Newsletter />} />
                 <Route path="/sent_newsletter" element={<SentNewsletter />} />
                 <Route path="/messages" element={<Messages />} />
+                <Route path="/client_users" element={<ClientUsers />} />
+                <Route path="/new_client_card" element={<NewClientCard />} />
             </Routes>
         )
     }

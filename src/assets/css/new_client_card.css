@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.client_card_main_wrapper {
+    width: 100%;
+    margin-top: 30px;
+    /* margin-right: 30px; */
+    overflow: scroll;
+    height: calc(100vh - 97px);
+    padding-bottom: 70px;
+    padding-right: 30px;
+}
+
+.client_card_wrapper {
+    width: 100%;
+    max-width: 1616px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.client_card_item1 {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 60%;
+    padding: 30px 30px 123px 30px;
+
+}
+
+.client_card_item1_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%
+}
+
+.client_card_item2 {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 30%;
+    padding: 30px 30px 84px 30px;
+}
+
+.client_card_checkbox2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 14px;
+    width: 100%;
+    border-bottom: 1px solid #323232;
+    padding-bottom: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.client_card_checkbox2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.client_card_checkmark2 {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    border: 1px solid #323232;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.client_card_checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.client_card_checkbox2 input:checked ~ .client_card_checkmark2:after {
+    display: block
+}
+
+/* Style the checkmark/indicator */
+.client_card_checkbox2 .client_card_checkmark2:after {
+    content: '';
+    background-image: url("../svg/news_check_icon2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -12%);
+    background-color: #323232;
+    border-radius: 5px;
+    /*display: none;*/
+}
+
+
+.client_card_checkbox3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 14px;
+    width: 100%;
+    border-bottom: 1px solid #323232;
+    padding-bottom: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.client_card_checkbox3 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.client_card_checkmark3 {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    border: 1px solid #323232;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.client_card_checkmark3:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.client_card_checkbox3 input:checked ~ .client_card_checkmark3:after {
+    display: block
+}
+
+/* Style the checkmark/indicator */
+.client_card_checkbox3 .client_card_checkmark3:after {
+    content: '';
+    background-image: url("../svg/news_check_icon2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -12%);
+    background-color: #323232;
+    border-radius: 5px;
+    /*display: none;*/
+}
+
+.client_card_checkbox1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 14px;
+    width: 100%;
+    border-bottom: 1px solid #323232;
+    padding-bottom: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.client_card_checkbox1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.client_card_checkmark1 {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    border: 1px solid #323232;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.client_card_checkmark1:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.client_card_checkbox1 input:checked ~ .client_card_checkmark1:after {
+    display: block
+}
+
+/* Style the checkmark/indicator */
+.client_card_checkbox1 .client_card_checkmark1:after {
+    content: '';
+    background-image: url("../svg/news_check_icon2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -12%);
+    background-color: #323232;
+    border-radius: 5px;
+    /*display: none;*/
+}
+
+
+
+#client_status .css-13cymwt-control {
+    border: 1px solid #0165E1!important;
+    border-radius: 10px!important;
+    min-height: 50px!important;
+    width: 100% !important
+}
+
+#client_type .css-13cymwt-control {
+    border: 1px solid #0165E1!important;
+    border-radius: 10px!important;
+    min-height: 50px!important;
+    width: 100% !important
+}
+#client_status .css-1u9des2-indicatorSeparator {
+    display: none!important;
+}
+#client_type .css-1u9des2-indicatorSeparator {
+    display: none!important;
+}
+#client_status .css-1xc3v61-indicatorContainer {
+    color: #BCBCBC;
+}
+
+#client_type .css-1xc3v61-indicatorContainer {
+    color: #BCBCBC;
+}
+
+#client_status .css-qbdosj-Input input{
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+
+#client_type .css-qbdosj-Input input {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    font-size: 16px!important;
+    color: #323232!important;
+}
+#client_status .css-qbdosj-Input input::placeholder {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal;
+    font-weight: 500!important;
+    font-size: 18px!important;
+    color: #BCBCBC!important;
+}
+
+#client_type .css-qbdosj-Input input::placeholder {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal;
+    font-weight: 500!important;
+    font-size: 18px!important;
+    color: #BCBCBC!important;
+}
+
+#client_status .css-qbdosj-Input {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal;
+    font-weight: 500!important;
+    font-size: 18px!important;
+    color: #BCBCBC!important;
+}
+
+#client_type .css-qbdosj-Input {
+    font-family: 'Montserrat',sans-serif!important;
+    font-style: normal;
+    font-weight: 500!important;
+    font-size: 18px!important;
+    color: #BCBCBC!important;
+}
+
+.client_card_item_input_title_wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.client_card_item_input_title {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #323232;
+    margin-bottom: 10px;
+}
+
+
+.client_card_item_input_field {
+    border: 1px solid #0165E1;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #BCBCBC;
+}
+
+.client_card_item_input_field::placeholder {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #BCBCBC;
+}
+
+.client_card_item1_child1 {
+    width: 46%;
+}
+
+.client_card_checkboxes_wrapper {
+    width: 100%;
+    margin-top: 40px
+
+}
+.client_card_checkbox_title {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #323232;
+}
+
+.client_card_item2_title {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.client_card_item_textarea {
+    border: 1px solid #0165E1;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px 20px 84px 20px;
+    cursor: pointer;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #BCBCBC;
+    resize: none;
+}
+.client_card_item_textarea::placeholder {
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #BCBCBC;
+}
+
+@media (max-width: 1440px) {
+    .client_card_item2 {
+        width: 34% !important;
+        padding: 30px 22px 94px 22px!important;
+    }
+    .client_card_item1 {
+        padding: 30px 22px 123px 22px!important;
+    }
+    .client_card_item_input_field {
+        font-size: 16px!important;
+    }
+    .client_card_item_input_field::placeholder {
+        font-size: 16px!important;
+    }
+    .client_card_item_input_title {
+        font-size: 16px!important;
+    }
+    #client_status .css-13cymwt-control {
+        min-height: 45px!important;
+    }
+    #client_type .css-13cymwt-control {
+        min-height: 45px!important;
+
+    }
+    .client_card_checkbox_title {
+        font-size: 16px!important;
+    }
+}

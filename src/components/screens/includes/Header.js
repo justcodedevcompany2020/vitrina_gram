@@ -131,6 +131,7 @@ import hamburger_icon from '../../../assets/svg/hamburger_icon.svg';
 import close_icon from '../../../assets/svg/close.svg';
 import constructor_no_active from '../../../assets/svg/constructor_no_active.svg';
 import dialog_active from '../../../assets/svg/dialog_active.svg';
+import client_active from '../../../assets/svg/client_active_icon.svg';
 
 
 const sl_set = {
@@ -250,9 +251,13 @@ export default function Header(props) {
                                 </div>
                                 <p className='headers_navigation_link_title'>Каталог</p>
                             </Link>
-                            <Link className="headers_navigation_link">
+                            <Link to={'/client_users'} className="headers_navigation_link">
                                 <div className='headers_navigation_link_img'>
-                                    <img src={client}/>
+                                    {pathName() == '/client_users' || pathName() == '/new_client_card' ?
+                                        <img src={client_active}/>
+                                        :
+                                        <img src={client}/>
+                                    }
                                 </div>
                                 <p className='headers_navigation_link_title'>Клиенты</p>
                             </Link>
@@ -333,9 +338,8 @@ export default function Header(props) {
                         </div>
 
                         <button className='hamburger_menu_btn' onClick={() => {
-                            // setShowMobileMenu(true)
+                            setShowMobileMenu(true)
                             // disableBodyScroll()
-                            home()
                         }}>
                             <img src={hamburger_icon}/>
                         </button>
@@ -347,7 +351,7 @@ export default function Header(props) {
                         <div className='mobile_menu_wrapper'>
                             <button className='mobile_menu_close_btn' onClick={() => {
                                 setShowMobileMenu(false)
-                                enableBodyScroll()
+                                // enableBodyScroll()
                             }}>
                                 <img src={close_icon}/>
                             </button>

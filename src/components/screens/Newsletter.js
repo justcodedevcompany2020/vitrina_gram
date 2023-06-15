@@ -90,19 +90,19 @@ export default function Newsletter () {
         document.body.style.overflow = "auto";
     };
 
-    const handleOptionChange = (changeEvent) => {
-        setSelectedAllTypes(changeEvent.target.value);
+    const handleOptionChange = () => {
+        setSelectedAllTypes(!selectedAllTypes);
 
     };
 
 
-    const handleOptionChange2 = (changeEvent) => {
-        setSelectedNewsletter1(changeEvent.target.value);
+    const handleOptionChange2 = () => {
+        setSelectedNewsletter1(!selectedNewsletter1);
 
     };
 
-    const handleOptionChange3 = (changeEvent) => {
-        setSelectedNewsletter2(changeEvent.target.value);
+    const handleOptionChange3 = () => {
+        setSelectedNewsletter2(!selectedNewsletter2);
 
     };
 
@@ -140,21 +140,24 @@ export default function Newsletter () {
                                         <div className="newsletter_items_wrapper">
                                             <div className='newsletter_item_names_wrapper'>
                                                 <div
-                                                    className="newsletter_item_name_box"
-                                                    style={{flex: 1.6}}
+                                                    className="newsletter_item_name_box newsletter_item_name_box10"
+                                                    // style={{flex: 1.6}}
                                                 >
                                                     <label className='container2'>
                                                         <input
-                                                            type='radio'
-                                                            name='all_types'
-                                                            value='all'
-                                                            checked={selectedAllTypes === 'all'}
+                                                            type='checkbox'
+                                                            value={selectedAllTypes}
+                                                            checked={selectedAllTypes}
                                                             onChange={handleOptionChange}
                                                         />
 
 
                                                         <span className='checkmark2'></span>
-                                                        <p className='newsletter_item_name'>Название рассылки</p>
+                                                        <p className='newsletter_item_name'
+                                                           style={{
+                                                               textAlign: 'unset'
+                                                           }}
+                                                        >Название рассылки</p>
                                                     </label>
                                                 </div>
                                                 <div className="newsletter_item_name_box">
@@ -184,21 +187,22 @@ export default function Newsletter () {
                                             </div>
                                             <div className="newsletter_item">
                                                 <div
-                                                    className="newsletter_item_child"
-                                                    style={{flex: 1.6}}
+                                                    className="newsletter_item_child newsletter_item_name_box10"
+                                                    // style={{flex: 1.6}}
                                                 >
                                                     <label className='container2'>
                                                         <input
-                                                            type='radio'
-                                                            name='newsletter'
-                                                            value='newsletter'
-                                                            checked={selectedNewsletter1 === 'newsletter'}
+                                                            type='checkbox'
+                                                            value={selectedNewsletter1}
+                                                            checked={selectedNewsletter1}
                                                             onChange={handleOptionChange2}
                                                         />
 
 
                                                         <span className='checkmark2'></span>
-                                                        <p className='newsletter_item_child_name'>Рекламная рассылка к 8 марта</p>
+                                                        <p className='newsletter_item_child_name'   style={{
+                                                            textAlign: 'unset'
+                                                        }}>Рекламная рассылка к 8 марта</p>
                                                     </label>
                                                 </div>
                                                 <div className="newsletter_item_child">
@@ -216,8 +220,8 @@ export default function Newsletter () {
 
                                                 </div>
                                                 <div className="newsletter_item_child2">
-                                                    <p className='newsletter_item_child_select_title'>Отменена</p>
-                                                    <Select placeholder="" id='newsletter_select2' options={options1} />
+                                                    {/*<p className='newsletter_item_child_select_title'>Отменена</p>*/}
+                                                    <Select placeholder="Отменена" id='newsletter_select2' options={options1} />
                                                 </div>
                                                 <div
                                                     className="newsletter_item_child"
@@ -230,21 +234,22 @@ export default function Newsletter () {
                                             </div>
                                             <div className="newsletter_item">
                                                 <div
-                                                    className="newsletter_item_child"
-                                                    style={{flex: 1.6}}
+                                                    className="newsletter_item_child newsletter_item_name_box10"
+                                                    // style={{flex: 1.6}}
                                                 >
                                                     <label className='container2'>
                                                         <input
-                                                            type='radio'
-                                                            name='newsletter2'
-                                                            value='newsletter2'
-                                                            checked={selectedNewsletter2 === 'newsletter2'}
+                                                            type='checkbox'
+                                                            value={selectedNewsletter2}
+                                                            checked={selectedNewsletter2}
                                                             onChange={handleOptionChange3}
                                                         />
 
 
                                                         <span className='checkmark2'></span>
-                                                        <p className='newsletter_item_child_name'>Рекламная рассылка к 23 февраля</p>
+                                                        <p className='newsletter_item_child_name'   style={{
+                                                            textAlign: 'unset'
+                                                        }}>Рекламная рассылка к 23 февраля</p>
                                                     </label>
                                                 </div>
                                                 <div className="newsletter_item_child">
@@ -262,9 +267,9 @@ export default function Newsletter () {
 
                                                 </div>
                                                 <div className="newsletter_item_child2">
-                                                    <p className='newsletter_item_child_select_title2'>Завершена</p>
+                                                    {/*<p className='newsletter_item_child_select_title2'>Завершена</p>*/}
 
-                                                    <Select placeholder="" id='newsletter_select2' options={options1} />
+                                                    <Select placeholder="Завершена" id='newsletter_select3' options={options1} />
                                                 </div>
                                                 <div
                                                     className="newsletter_item_child"

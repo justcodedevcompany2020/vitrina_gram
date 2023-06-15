@@ -97,8 +97,8 @@ export default function Newsletter () {
 
     };
 
-    const handleOptionChange3 = (changeEvent) => {
-        setSelectedNewsletter3(changeEvent.target.value);
+    const handleOptionChange3 = () => {
+        setSelectedNewsletter3(!selectedNewsletter3);
 
     };
 
@@ -169,16 +169,16 @@ export default function Newsletter () {
                                         </div>
                                         <div className="setNewsletter_item">
                                             <div className="setNewsletter_item_select">
-                                                <p className='setNewsletter_item_select_title'>Дополнительные настройки</p>
-                                                <Select placeholder="" id='setNewsletter_select' options={options1} />
+                                                {/*<p className='setNewsletter_item_select_title'>Дополнительные настройки</p>*/}
+                                                <Select placeholder="Дополнительные настройки" id='setNewsletter_select' options={options1} />
                                             </div>
                                             <div className='setNewsletter_item_check_input_wrapper'>
                                                 <label className='container3'>
                                                     <input
-                                                        type='radio'
+                                                        type='checkbox'
                                                         name='newsletter'
-                                                        value='newsletter'
-                                                        checked={selectedNewsletter3 === 'newsletter'}
+                                                        value={selectedNewsletter3}
+                                                        checked={selectedNewsletter3}
                                                         onChange={handleOptionChange3}
                                                     />
 
